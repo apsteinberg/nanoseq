@@ -22,7 +22,7 @@ process BEDTOOLS_GENOMECOV {
         -split \\
         -ibam ${bam[0]} \\
         -bg \\
-        | bedtools sort > ${meta.id}.bedGraph
+        | sort -k 1,1 -k2,2n  > ${meta.id}.bedGraph
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
