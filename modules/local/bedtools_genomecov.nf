@@ -18,6 +18,7 @@ process BEDTOOLS_GENOMECOV {
     split = (params.protocol == 'DNA' || is_transcripts) ? "" : "-split"
     """
     export TMPDIR=$PWD/sort_tmpdir
+    mkdir -p $PWD/sort_tmpdir
     bedtools genomecov -split -ibam ${bam[0]} -bg > genomecov.txt
     sort -k 1,1 -k2,2n genomecov.txt > ${meta.id}.bedGraph
     cat <<-END_VERSIONS > versions.yml
