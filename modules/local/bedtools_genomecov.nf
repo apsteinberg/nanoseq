@@ -17,10 +17,9 @@ process BEDTOOLS_GENOMECOV {
     script:
     split = (params.protocol == 'DNA' || is_transcripts) ? "" : "-split"
     """
-    export TMPDIR=sort_tmpdir
     mkdir -p sort_tmpdir
     bedtools genomecov -split -ibam ${bam[0]} -bg > genomecov.txt
-    sort -k 1,1 -k2,2n genomecov.txt > ${meta.id}.bedGraph
+    sort -T=sort_tmpdir -k 1,1 -k2,2n genomecov.txt > ${meta.id}.bedGraph
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
