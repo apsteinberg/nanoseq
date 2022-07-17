@@ -19,7 +19,7 @@ process BEDTOOLS_GENOMECOV {
     """
     mkdir -p sort_tmpdir
     bedtools genomecov -split -ibam ${bam[0]} -bg > genomecov.txt
-    sort -T=sort_tmpdir -k 1,1 -k2,2n genomecov.txt > ${meta.id}.bedGraph
+    sort-bed --max-mem 30G --tmpdir sort_tmpdir genomecov.txt > ${meta.id}.bedGraph
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
