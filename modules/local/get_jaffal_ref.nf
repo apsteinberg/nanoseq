@@ -11,7 +11,7 @@ process GET_JAFFAL_REF {
     script:
     """
     curl \\
-    -L https://ndownloader.figshare.com/files/28168755 \\
+    -L https://mondriantestdata.s3.amazonaws.com/for_jaffal.tar.gz \\
     -o for_jaffal.tar.gz
     """
 }
