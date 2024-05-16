@@ -23,8 +23,8 @@ outdir=/data1/shahs3/users/preskaa/APS022_Archive/240516_nanoseq_test
 
 nextflow run apsteinberg/nanoseq \
   -profile singularity,iris \
-  -input ${samplesheet} \
+  --input ${samplesheet} \
   -c ${PWD}/conf/iris.config \
-  -outdir ${outdir} \
+  --outdir ${outdir} \
   -params-file nf-params.json
 
