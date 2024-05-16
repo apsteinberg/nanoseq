@@ -297,6 +297,27 @@ workflow NANOSEQ{
         ch_software_versions = ch_software_versions.mix(NANOLYSE.out.versions.first().ifEmpty(null))
     }
 
+/*
+* get me to the choppa
+* use this to disambiguate mouse and human reads in PDX samples; found nanolyse didn't work great
+* and this is the same tool re-written in rust
+*/
+    if (params.run_chopper) {
+        ch_fastq
+            .map { it -> [ it[0], it[1] ] }
+            .set { ch_fastq_chopper }
+        ch_chopper_fasta = file(params.chopper_fasta, checkIfExists: true)
+        /*
+         * MODULE: DNA contaminant removal using chopper
+         */
+        CHOPPER ( ch_fastq_chopper, ch_chopper_fasta )
+        CHOPPER.out.fastq
+            .join( ch_sample )
+            .map { it -> [ it[0], it[1], it[3], it[4], it[5], it[6] ]}
+            .set { ch_fastq }
+        ch_software_versions = ch_software_versions.mix(CHOPPER.out.versions.first().ifEmpty(null))
+    }
+
     ch_pycoqc_multiqc = Channel.empty()
     ch_fastqc_multiqc = Channel.empty()
     if (!params.skip_qc) {
