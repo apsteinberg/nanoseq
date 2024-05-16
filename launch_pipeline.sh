@@ -14,7 +14,7 @@ source /home/preskaa/miniconda3/bin/activate nf-core
 
 ## load modules
 module load singularity/3.7.1
-module load java/11.0.12
+module load java/20.0.1
 ## example samplesheet
 ## technical replicates get merged ...
 samplesheet=/data1/shahs3/users/preskaa/APS022_Archive/ont_rna/nanoseq/samplesheet.csv
