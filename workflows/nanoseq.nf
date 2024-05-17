@@ -125,6 +125,7 @@ include { QCAT                  } from '../modules/local/qcat'
 include { BAM_RENAME            } from '../modules/local/bam_rename'
 include { BAMBU                 } from '../modules/local/bambu'
 include { MULTIQC               } from '../modules/local/multiqc'
+include { CHOPPER                 } from '../modules/local/chopper'
 
 /*
  * SUBWORKFLOW: Consisting of a mix of local and nf-core/modules
@@ -154,7 +155,6 @@ include { RNA_FUSIONS_JAFFAL               } from '../subworkflows/local/rna_fus
  * MODULE: Installed directly from nf-core/modules
  */
 include { NANOLYSE                    } from '../modules/nf-core/modules/nanolyse/main'
-include { CHOPPER                    } from '../modules/nf-core/modules/chopper/main'
 include { CUSTOM_DUMPSOFTWAREVERSIONS } from '../modules/nf-core/modules/custom/dumpsoftwareversions/main'
 
 /*
