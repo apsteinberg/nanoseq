@@ -165,6 +165,16 @@
                     "type": "string",
                     "description": "Fasta file to be filtered against using NanoLyse",
                     "fa_icon": "far fa-file-code"
+                },
+                "run_chopper": {
+                    "type": "boolean",
+                    "description": "For PDX samples, filter reads from FastQ files using chopper",
+                    "fa_icon": "fas fa-fast-forward"
+                },
+                "chopper_fasta": {
+                    "type": "string",
+                    "description": "mouse fasta file to be filtered against using chopper (can also use to filter other contaminants)",
+                    "fa_icon": "far fa-file-code"
                 }
             }
         },
