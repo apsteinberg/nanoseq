@@ -6,6 +6,7 @@
 #SBATCH --mem=8GB
 #SBATCH --job-name=nanoseqtest
 #SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=preskaa@mskcc.org
 #SBATCH --output=slurm%j_snkmk.out
 
 
