@@ -26,5 +26,6 @@ nextflow run apsteinberg/nanoseq \
   -profile singularity,slurm \
   --input ${samplesheet} \
   --outdir ${outdir} \
+  --workdir ${outdir}/work
   -params-file nf-params.json
 
