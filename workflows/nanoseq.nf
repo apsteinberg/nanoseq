@@ -15,8 +15,8 @@ checkPathParamList = [ params.input, params.multiqc_config ]
 for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
 
 // Check mandatory parameters (missing protocol or profile will exit the run.)
-if (params.input) { 
-    ch_input = file(params.input) 
+if (params.input) {
+    ch_input = file(params.input)
 } else {
     exit 1, 'Input samplesheet not specified!'
 }
@@ -154,6 +154,7 @@ include { RNA_FUSIONS_JAFFAL               } from '../subworkflows/local/rna_fus
  * MODULE: Installed directly from nf-core/modules
  */
 include { NANOLYSE                    } from '../modules/nf-core/modules/nanolyse/main'
+include { CHOPPER                    } from '../modules/nf-core/modules/chopper/main'
 include { CUSTOM_DUMPSOFTWAREVERSIONS } from '../modules/nf-core/modules/custom/dumpsoftwareversions/main'
 
 /*
