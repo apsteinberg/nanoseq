@@ -6,5 +6,6 @@
     "skip_differential_analysis": true,
     "run_chopper": true,
     "skip_basecalling": true,
-    "chopper_fasta": "/data1/shahs3/isabl_data_lake/assemblies/WGS-MM10/mouse/mm10_build38_mouse.fasta"
+    "chopper_fasta": "/data1/shahs3/isabl_data_lake/assemblies/WGS-MM10/mouse/mm10_build38_mouse.fasta",
+    "jaffal_ref_dir": "/data1/shahs3/isabl_data_lake/assemblies/WGS-GRCh38/for_jaffal/"
 }
