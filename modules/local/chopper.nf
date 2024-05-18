@@ -24,7 +24,6 @@ process CHOPPER {
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
     gunzip -c $fastq | chopper --contam $fasta | gzip > ${prefix}.fastq.gz
-    mv chopper.log ${prefix}.chopper.log
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
