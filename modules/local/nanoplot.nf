@@ -4,8 +4,8 @@ process NANOPLOT {
 
     conda (params.enable_conda ? 'bioconda::nanoplot=1.38.0' : null)
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/nanoplot:1.38.0--pyhdfd78af_0' :
-        'quay.io/biocontainers/nanoplot:1.38.0--pyhdfd78af_0' }"
+        'https://depot.galaxyproject.org/singularity/nanoplot:1.42.0--pyhdfd78af_0' :
+        'quay.io/biocontainers/nanoplot:1.42.0--pyhdfd78af_0' }"
 
     input:
     tuple val(meta), path(ontfile)
@@ -32,6 +32,8 @@ process NANOPLOT {
     NanoPlot \\
         -t $task.cpus \\
         $input_file \\
+        --raw \\ // Store the extracted data in tab separated file (for future plotting)
+        --tsv_stats \\ // Output the stats file as a properly formatted TSV.
         -o $output_dir
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
