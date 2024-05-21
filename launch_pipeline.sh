@@ -18,7 +18,7 @@ module load singularity/3.7.1
 module load java/20.0.1
 ## example samplesheet
 ## technical replicates get merged ...
-samplesheet=${HOME}/nanoseq/resources/samplesheet.csv
+samplesheet=${HOME}/nanoseq/resources/test_samplesheet.csv
 ## specify path to out directory
 outdir=/data1/shahs3/users/preskaa/APS022_Archive/240516_nanoseq_test
 

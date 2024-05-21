@@ -1,0 +1,2 @@
+group,replicate,barcode,input_file,fasta,gtf
+TCDO-SAR-033-PDX-small,1,,/data1/shahs3/users/preskaa/APS022_Archive/240516_nanoseq_test/test_fastq/TCDO-SAR-033-PDX.downsampled.fastq.gz,/data1/shahs3/reference/ref-sarcoma/GRCh38/v45/GRCh38.primary_assembly.genome.fa,/data1/shahs3/reference/ref-sarcoma/GRCh38/v45/gencode.v45.primary_assembly.annotation.gtf
