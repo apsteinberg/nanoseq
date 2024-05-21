@@ -23,7 +23,7 @@ samplesheet=${HOME}/nanoseq/resources/samplesheet.csv
 outdir=/data1/shahs3/users/preskaa/APS022_Archive/240516_nanoseq_test
 
 nextflow run apsteinberg/nanoseq \
-  -resume 6c03bf60-99ea-41cd-a949-c30986899f14
+  -resume 6c03bf60-99ea-41cd-a949-c30986899f14 \
   -c ${PWD}/conf/iris.config \
   -profile singularity,slurm \
   --input ${samplesheet} \
