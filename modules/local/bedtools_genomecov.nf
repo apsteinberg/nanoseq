@@ -1,6 +1,6 @@
 process BEDTOOLS_GENOMECOV {
     tag "$meta.id"
-    label 'process_medium'
+    label 'bedtools_genomecov'
 
     conda "bioconda::bedtools=2.29.2"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
