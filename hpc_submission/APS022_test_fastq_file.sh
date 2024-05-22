@@ -24,4 +24,4 @@ mkdir -p ${fastqdir}
 
 input_fastq=/data1/shahs3/isabl_data_lake/experiments/08/05/20805/data/SHAH_H003459_T01_01_TR01_283158a9b4928462_TCDO-SAR-033-PDX-A_R1_001.fastq.gz
 output_fastq=${fastqdir}/TCDO-SAR-033-PDX.downsampled.fastq.gz
-seqtk sample -s100 ${input_fastq} 0.1 | gzip > ${output_fastq}
+seqtk sample -s100 ${input_fastq} 0.01 | gzip > ${output_fastq}
