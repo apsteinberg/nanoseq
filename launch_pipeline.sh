@@ -22,6 +22,11 @@ samplesheet=${HOME}/nanoseq/resources/test_samplesheet.csv
 ## specify path to out directory
 outdir=/data1/shahs3/users/preskaa/APS022_Archive/240516_nanoseq_test
 
+## reference genome for chopper (if sample is PDX)
+mouse_refgenome=/data1/shahs3/isabl_data_lake/assemblies/WGS-MM10/mouse/mm10_build38_mouse.fasta
+
+## last two flags trigger chopper to differentiate mouse from human reads for PDX samples
+## these flags should not be used for human samples
 nextflow run apsteinberg/nanoseq \
   -c ${PWD}/conf/iris.config \
   -profile singularity,slurm \
@@ -29,7 +34,10 @@ nextflow run apsteinberg/nanoseq \
   --outdir ${outdir} \
   -work-dir ${outdir}/work \
   -params-file nf-params.json \
-#  --skip_fusion_analysis
+  --skip_fusion_analysis \
+  --run_chopper \
+  --chopper_fasta=${mouse_refgenome} \
+
 
 #nextflow run apsteinberg/nanoseq -resume 6c03bf60-99ea-41cd-a949-c30986899f14
 
