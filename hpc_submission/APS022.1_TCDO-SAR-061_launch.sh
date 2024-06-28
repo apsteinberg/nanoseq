@@ -7,7 +7,7 @@
 #SBATCH --job-name=061
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=preskaa@mskcc.org
-#SBATCH --output=slurm%j_snkmk.out
+#SBATCH --output=slurm%j_TCDO-SAR-061.out
 
 
 ## activate nf-core conda environment
