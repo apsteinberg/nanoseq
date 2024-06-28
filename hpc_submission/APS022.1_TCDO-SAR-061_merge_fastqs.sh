@@ -14,5 +14,5 @@ out_dir=${archive}/merged
 cd ${archive}
 mkdir -p ${out_dir}
 ## combine fastqs ...
-cat ${archive}/*.fastq.gz > ${out_dir}/TCDO-SAR-061.merged.fastq.gz**
+cat ${archive}/*.fastq.gz > ${out_dir}/TCDO-SAR-061.merged.fastq.gz
 
