@@ -1,2 +1,2 @@
 group,replicate,barcode,input_file,fasta,gtf
-TCDO-SAR-061,1,,/data1/shahs3/users/preskaa/fastqs/merged/TCDO-SAR-061.merged.fastq.gz,/data1/shahs3/reference/ref-sarcoma/GRCh38/v45/GRCh38.primary_assembly.genome.fa,/data1/shahs3/reference/ref-sarcoma/GRCh38/v45/gencode.v45.primary_assembly.annotation.gtf
+TCDO-SAR-061,1,,/data1/shahs3/users/preskaa/fastqs/ont_rna/TCDO-SAR-061/merged/TCDO-SAR-061.merged.fastq.gz,/data1/shahs3/reference/ref-sarcoma/GRCh38/v45/GRCh38.primary_assembly.genome.fa,/data1/shahs3/reference/ref-sarcoma/GRCh38/v45/gencode.v45.primary_assembly.annotation.gtf
