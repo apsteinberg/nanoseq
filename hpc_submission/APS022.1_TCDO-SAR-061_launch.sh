@@ -36,6 +36,7 @@ nextflow run apsteinberg/nanoseq \
   --outdir ${outdir} \
   -work-dir ${outdir}/work \
   -params-file ${HOME}/nanoseq/nf-params.json \
+  -resume
 
 
 #nextflow run apsteinberg/nanoseq -resume 6c03bf60-99ea-41cd-a949-c30986899f14
