@@ -27,13 +27,15 @@ mouse_refgenome=/data1/shahs3/isabl_data_lake/assemblies/WGS-MM10/mouse/mm10_bui
 
 ## last two flags trigger chopper to differentiate mouse from human reads for PDX samples
 ## these flags should not be used for human samples
+cd ${outdir}
+
 nextflow run apsteinberg/nanoseq \
   -c ${HOME}/nanoseq/conf/iris.config \
   -profile singularity,slurm \
   --input ${samplesheet} \
   --outdir ${outdir} \
   -work-dir ${outdir}/work \
-  -params-file nf-params.json \
+  -params-file ${HOME}/nanoseq/nf-params.json \
 
 
 #nextflow run apsteinberg/nanoseq -resume 6c03bf60-99ea-41cd-a949-c30986899f14
