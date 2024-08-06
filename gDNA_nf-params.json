@@ -3,5 +3,7 @@
     "protocol": "DNA",
     "skip_demultiplexing": true,
     "skip_basecalling": true,
+    "skip_quantification": true,
+    "skip_differential_analysis": true,
     "call_variants": true
 }
