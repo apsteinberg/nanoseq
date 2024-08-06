@@ -1,0 +1,7 @@
+{
+    "email": "preskaa@mskcc.org",
+    "protocol": "DNA",
+    "skip_demultiplexing": true,
+    "skip_basecalling": true,
+    "call_variants": true
+}
