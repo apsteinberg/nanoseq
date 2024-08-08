@@ -5,5 +5,9 @@
     "skip_basecalling": true,
     "skip_quantification": true,
     "skip_differential_analysis": true,
-    "call_variants": true
+    "call_variants": true,
+    "skip_bigbed": true,
+    "skip_bigwig": true,
+    "skip_vc": true,
+    "skip_sv": false
 }

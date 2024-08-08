@@ -30,6 +30,7 @@ mouse_refgenome=/data1/shahs3/isabl_data_lake/assemblies/WGS-MM10/mouse/mm10_bui
 cd ${outdir}
 
 nextflow run apsteinberg/nanoseq \
+  -resume \
   -c ${HOME}/nanoseq/conf/iris.config \
   -profile singularity,slurm \
   --input ${samplesheet} \
